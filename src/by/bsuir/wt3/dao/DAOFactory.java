@@ -1,5 +1,28 @@
 package by.bsuir.wt3.dao;
 
-public class DAOFactory {
+import by.bsuir.wt3.dao.impl.*;
 
+public final class DAOFactory {
+	private static final DAOFactory instance = new DAOFactory();
+
+	private final UserDAO userDAO = 
+			new UserDAOimpl("src/main/resources/case_db.xml");
+	
+	private final CaseDAO caseDAO =
+			new CaseDAOimpl("src/main/resources/user_db.xml");
+	
+	private DAOFactory() {}
+
+	public UserDAO getUserDAO() {
+		return userDAO;
+	}
+	
+	public CaseDAO getCaseDAO()
+	{
+		return caseDAO;
+	}
+
+	public static DAOFactory getInstance() {
+		return instance;
+	}
 }
