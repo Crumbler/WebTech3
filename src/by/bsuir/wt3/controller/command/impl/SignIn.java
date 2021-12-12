@@ -23,7 +23,16 @@ public class SignIn implements Command {
 		String login = request.substring(0, splitIndex);
 		
 		String passwordHashString = request.substring(splitIndex + 1);
-		int passwordHash = Integer.parseInt(passwordHashString);
+		
+		int passwordHash;
+		try
+		{
+			passwordHash = Integer.parseInt(passwordHashString);
+		}
+		catch (NumberFormatException e)
+		{
+			return "User not found.";
+		}
 		
 		UserStatus userStatus = userService.getUserStatus(login, passwordHash);
 		

@@ -7,7 +7,7 @@ import by.bsuir.wt3.controller.command.impl.*;
 public final class CommandProvider {
 	private static final Hashtable<CommandName, Command> repository = new Hashtable<>();
 	
-	CommandProvider()
+	public static void Init()
 	{
 		repository.put(CommandName.SIGN_IN, new SignIn());
 		repository.put(CommandName.GET, new Get());
@@ -17,6 +17,8 @@ public final class CommandProvider {
 	
 	public static Command getCommand(String name)
 	{
+		System.out.println(CommandName.SIGN_IN.name());
+		
 		CommandName commandName = null;
 		Command command = null;
 		

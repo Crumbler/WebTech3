@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Users>
+	<User login="usr1" hash="1234" status="Normal">
+	</User>
+	<User login="usr2" hash="516" status="Admin">
+	</User>
+</Users>

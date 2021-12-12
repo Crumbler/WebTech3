@@ -27,7 +27,7 @@ public class Set implements Command {
 		
 		UserStatus userStatus = userService.getUserStatus(login, passwordHash);
 		
-		if (userStatus == UserStatus.NotFound)
+		if (userStatus != UserStatus.Admin)
 		{
 			return "Unauthorized request.";
 		}

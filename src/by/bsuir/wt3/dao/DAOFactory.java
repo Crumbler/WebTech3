@@ -6,14 +6,15 @@ public final class DAOFactory {
 	private static final DAOFactory instance = new DAOFactory();
 
 	private final UserDAO userDAO = 
-			new UserDAOimpl("src/main/resources/case_db.xml");
+			new UserDAOimpl("src/by/bsuir/wt3/main/resources/user_db.xml");
 	
 	private final CaseDAO caseDAO =
-			new CaseDAOimpl("src/main/resources/user_db.xml");
+			new CaseDAOimpl("src/by/bsuir/wt3/main/resources/case_db.xml");
 	
 	private DAOFactory() {}
 
-	public UserDAO getUserDAO() {
+	public UserDAO getUserDAO() 
+	{
 		return userDAO;
 	}
 	

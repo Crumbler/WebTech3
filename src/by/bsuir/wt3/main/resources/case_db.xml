@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Cases>
+	<Case id = "1">
+		First case
+	</Case>
+	<Case id = "2">
+		Second case
+	</Case>
+</Cases>

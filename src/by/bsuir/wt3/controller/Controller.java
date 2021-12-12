@@ -24,6 +24,7 @@ public class Controller {
 		String commandName = request.substring(0, splitIndex);
 		commandName = commandName.toUpperCase();
 		System.out.println("Command name: " + commandName);
+		System.out.println("Command name length: " + commandName.length());
 		
 		Command command = CommandProvider.getCommand(commandName);
 		
